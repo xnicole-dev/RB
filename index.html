@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rodel B</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+    color: white;
+  }
+
+  .card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    animation: pop 0.8s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  @keyframes pop {
+    0% {transform: scale(0.5); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+  }
+
+  h1 {
+    font-size: 34px;
+    color: #00c6ff;
+    margin-bottom: 10px;
+    animation: glow 1.5s infinite alternate;
+  }
+
+  @keyframes glow {
+    from {text-shadow: 0 0 8px #00c6ff;}
+    to {text-shadow: 0 0 20px #00f2fe;}
+  }
+
+  p {
+    font-size: 18px;
+    color: #ccc;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00c6ff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #bae7fc;
+    transform: scale(1.1);
+  }
+
+  /* Confetti */
+  .confetti {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: #00c6ff;
+    top: -10px;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh) rotate(360deg);
+    }
+    }
+
+    .profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 4px solid #00c6ff;
+    box-shadow: 0 0 20px #00c6ff;
+
+    /* ✅ Fade-in animation */
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+
+    /* ✅ Smooth hover animation */
+    transition: transform 0.6s;
+    }
+
+    /* ✅ Fade-in keyframes */
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    /* ✅ Flip/Rotate on hover */
+    .profile-img:hover {
+    transform: rotateY(360deg) scale(1.1);
+    }
+
+</style>
+</head>
+
+<body>
+
+<script>
+  for (let i = 0; i < 50; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.backgroundColor = 
+      ['#00c6ff','#00f2fe','#ffffff','#aaaaaa'][Math.floor(Math.random()*4)];
+    
+    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(confetti);
+  }
+</script>
+
+<div class="card">
+
+    
+<!-- ✅ INSERT IMAGE HERE -->
+  <img src="./clap-hands.gif" alt="clap" class="clap-img">">
+
+  <h1>Congratulations! 🎉🎉🍻</h1>
+  <p>We're proud of you! 🤩</p>
+  </a>
+</div>
+
+</body>
+</html>
